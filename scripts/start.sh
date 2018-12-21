@@ -1,5 +1,8 @@
 #! /bin/bash
 
+# install splunkforwarder
+dpkg -i /home/datasec/splunkforwarder.deb
+
 # add data-sec splunk-server
 /opt/splunkforwarder/bin/splunk enable boot-start
 
