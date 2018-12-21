@@ -16,10 +16,18 @@ dpkg -i /home/datasec/splunkforwarder.deb
 /opt/splunkforwarder/bin/splunk start
 
 # run reposync
-sh /home/datasec/scripts/syncrepo.sh
+sh /home/datasec/scripts/Honeys/scripts/syncrepo.sh
 
-# run firststart
-sh /home/datasec/scripts/Honeys/scripts/firststart.sh
+# Simple update,upgrade
+sudo apt update && sudo apt upgrade -y
 
-# reboot
+#run docker container smb
+sudo sh /home/datasec/scripts/Honeys/scripts/restart.sh
+
+# done and restart
+echo "All done"
+echo "This VM is going to restart"
+echo "If you screwed up you can rerun this batch in /etc/home/datasec/scripts/Honeys/firststart.sh"
+
+# restart
 reboot now
