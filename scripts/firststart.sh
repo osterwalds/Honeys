@@ -9,6 +9,11 @@ sudo sh /home/datasec/scripts/syncrepo.sh
 # clear screen
 clear
 
+# activate splunkforwarder
+/opt/splunkforwarder/bin/splunk start
+/opt/splunkforwarder/bin/splunk add forward-server honeys.data-sec.net:9997
+/opt/splunkforwarder/bin/splunk add monitor /unsafe/logs/
+
 # ask for hostname
 #echo "Set up the hostname for this VM. This name will show up in Splunk later on"
 #echo ""
