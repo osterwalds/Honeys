@@ -7,7 +7,7 @@
 /opt/splunkforwarder/bin/splunk add monitor /unsafe/logs/
 
 # run reposync
-sh /home/datasec/scripts/Honeys/scripts/reposync.sh
+sh /home/datasec/scripts/Honeys/scripts/syncrepo.sh
 
 # run firststart
 sh /home/datasec/scripts/Honeys/scripts/firststart.sh
