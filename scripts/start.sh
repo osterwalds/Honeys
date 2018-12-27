@@ -1,10 +1,10 @@
 #! /bin/bash
 
 # install splunkforwarder
-dpkg -i /home/datasec/splunkforwarder.deb
+#dpkg -i /home/datasec/splunkforwarder.deb
 
 #rm splunk-passwd
-rm /opt/splunkforwarder/etc/passwd
+#rm /opt/splunkforwarder/etc/passwd
 
 # add data-sec splunk-server
 #/opt/splunkforwarder/bin/splunk start 
