@@ -7,13 +7,13 @@ dpkg -i /home/datasec/splunkforwarder.deb
 rm /opt/splunkforwarder/etc/passwd
 
 # add data-sec splunk-server
-/opt/splunkforwarder/bin/splunk start --accept-license --answer-yes --auto-ports --no-prompt
+#/opt/splunkforwarder/bin/splunk start 
 
 # create user-seed
-touch /opt/splunkforwarder/etc/system/local/user-seed.conf
-echo '[user_info]' >> /opt/splunkforwarder/etc/system/local/user-seed.conf
-echo 'USERNAME = "admin"' >> /opt/splunkforwarder/etc/system/local/user-seed.conf
-echo 'PASSWORD = "password"' >> /opt/splunkforwarder/etc/system/local/user-seed.conf
+#touch /opt/splunkforwarder/etc/system/local/user-seed.conf
+#echo '[user_info]' >> /opt/splunkforwarder/etc/system/local/user-seed.conf
+#echo 'USERNAME = "admin"' >> /opt/splunkforwarder/etc/system/local/user-seed.conf
+#echo 'PASSWORD = "password"' >> /opt/splunkforwarder/etc/system/local/user-seed.conf
 
 # add data-sec splunk-server
 /opt/splunkforwarder/bin/splunk enable boot-start
