@@ -4,6 +4,9 @@
 dpkg -i /home/datasec/splunkforwarder.deb
 
 # add data-sec splunk-server
+/opt/splunkforwarder/bin/splunk start --accept-license --answer-yes --auto-ports --no-prompt
+
+# add data-sec splunk-server
 /opt/splunkforwarder/bin/splunk enable boot-start
 
 # add data-sec splunk-server
@@ -11,9 +14,6 @@ dpkg -i /home/datasec/splunkforwarder.deb
 
 # add logfile monitor smb
 /opt/splunkforwarder/bin/splunk add monitor /unsafe/logs/smb/smb.log
-
-# add data-sec splunk-server
-/opt/splunkforwarder/bin/splunk start
 
 # run reposync
 sh /home/datasec/scripts/Honeys/scripts/syncrepo.sh
