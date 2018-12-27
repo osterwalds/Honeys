@@ -7,7 +7,7 @@ dpkg -i /home/datasec/splunkforwarder.deb
 /opt/splunkforwarder/bin/splunk enable boot-start
 
 # add data-sec splunk-server
-/opt/splunkforwarder/bin/splunk add forward-server honeys.data-sec.net:9997
+/opt/splunkforwarder/bin/splunk add forward-server honey.data-sec.net:9997
 
 # add logfile monitor
 /opt/splunkforwarder/bin/splunk add monitor /unsafe/logs/
