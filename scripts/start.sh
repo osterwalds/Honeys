@@ -9,8 +9,8 @@ dpkg -i /home/datasec/splunkforwarder.deb
 # add data-sec splunk-server
 /opt/splunkforwarder/bin/splunk add forward-server honey.data-sec.net:9997
 
-# add logfile monitor
-/opt/splunkforwarder/bin/splunk add monitor /unsafe/logs/
+# add logfile monitor smb
+/opt/splunkforwarder/bin/splunk add monitor /unsafe/logs/smb/smb.log
 
 # add data-sec splunk-server
 /opt/splunkforwarder/bin/splunk start
