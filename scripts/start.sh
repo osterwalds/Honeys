@@ -5,6 +5,7 @@ dpkg -i /home/datasec/splunkforwarder.deb
 
 # create user-seed
 touch /opt/splunkforwarder/etc/system/local/user-seed.conf
+echo '[user_info]' >> /opt/splunkforwarder/etc/system/local/user-seed.conf
 echo 'USERNAME = "admin"' >> /opt/splunkforwarder/etc/system/local/user-seed.conf
 echo 'PASSWORD = "password"' >> /opt/splunkforwarder/etc/system/local/user-seed.conf
 
