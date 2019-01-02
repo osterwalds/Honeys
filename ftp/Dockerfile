@@ -12,7 +12,7 @@ COPY vsftpd_virtual /etc/pam.d/
 COPY run-vsftpd.sh /usr/sbin/
 
 RUN chmod +x /usr/sbin/run-vsftpd.sh && \
-		mkdir -p /var/run/vsftpd/empty && touch /var/log/vsftpd/vsftpd.log
+		mkdir -p /var/run/vsftpd/empty
 
 EXPOSE 20 21
 
