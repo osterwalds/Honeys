@@ -1,28 +1,10 @@
 #! /bin/bash
 
-# install splunkforwarder
-#dpkg -i /home/datasec/splunkforwarder.deb
-
-#rm splunk-passwd
-#rm /opt/splunkforwarder/etc/passwd
-
-# add data-sec splunk-server
-#/opt/splunkforwarder/bin/splunk start 
-
-# create user-seed
-#touch /opt/splunkforwarder/etc/system/local/user-seed.conf
-#echo '[user_info]' >> /opt/splunkforwarder/etc/system/local/user-seed.conf
-#echo 'USERNAME = "admin"' >> /opt/splunkforwarder/etc/system/local/user-seed.conf
-#echo 'PASSWORD = "password"' >> /opt/splunkforwarder/etc/system/local/user-seed.conf
-
 # add data-sec splunk-server
 /opt/splunkforwarder/bin/splunk enable boot-start
 
 # add data-sec splunk-server
 /opt/splunkforwarder/bin/splunk add forward-server honey.data-sec.net:9997
-
-# add logfile monitor smb
-/opt/splunkforwarder/bin/splunk add monitor /unsafe/logs/smb/smb.log
 
 # run reposync
 sh /home/datasec/scripts/Honeys/scripts/syncrepo.sh
