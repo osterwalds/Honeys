@@ -12,7 +12,7 @@ sh /home/datasec/scripts/Honeys/scripts/syncrepo.sh
 # Simple update,upgrade
 sudo apt update && sudo apt upgrade -y
 
-#run docker container smb
+#run docker containers
 sudo sh /home/datasec/scripts/Honeys/scripts/restart.sh
 
 # done and restart
