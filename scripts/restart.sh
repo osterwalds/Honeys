@@ -9,6 +9,12 @@ docker rm $(docker ps -aq)
 # remove all logs
 rm -rf /unsafe/logs
 
+# remove static files
+rm -rf /unsafe/static
+
+# recreate static folder
+mkdir /unsafe/static
+
 # recreate log folders
 mkdir /unsafe/logs
 
