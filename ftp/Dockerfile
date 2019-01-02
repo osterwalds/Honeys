@@ -1,6 +1,7 @@
 FROM centos:7
 
-ARG USER_ID=14 ARG GROUP_ID=50
+ARG USER_ID=14
+ARG GROUP_ID=50
 
 RUN yum -y update && yum clean all
 RUN yum install -y \
