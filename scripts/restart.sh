@@ -20,8 +20,7 @@ mkdir /unsafe/logs
 docker run -it -d -v /unsafe/logs/smb:/var/log/samba -p 139:139 -p 445:445 steven411/smb
 
 # Start vsftpd container
-docker run -d -v /unsafe/logs/ftp:/var/log/vsftpd -p 20:20 -p 21:21 -p 47400-47470:47400-47470 -e FTP_USER=admin \
+docker run -d -v /unsafe/logs/ftp:/var/log/vsftpd -p 20:20 -p 21:21 -e FTP_USER=admin \
                 -e FTP_PASS=admin \
-                -e PASV_ADDRESS=0.0.0.0 \
                 --name ftp \
-                --restart=always bogem/ftp
+                --restart=always fauria/vsftpd
