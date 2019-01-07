@@ -1,5 +1,8 @@
 #! /bin/bash
 
+# replace splunk hostname with current hostname
+rpl -qf "admin1-VirtualBox" $HOSTNAME /opt/splunkforwarder/etc/system/local/server.conf
+
 # add data-sec splunk-server
 /opt/splunkforwarder/bin/splunk enable boot-start
 
