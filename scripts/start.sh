@@ -4,7 +4,7 @@
 apt install rpl -y
 
 # replace splunk hostname with current hostname
-rpl -qf "admin1-VirtualBox" $HOST /opt/splunkforwarder/etc/system/local/server.conf
+rpl -qf "admin1-VirtualBox" $(uname -n) /opt/splunkforwarder/etc/system/local/server.conf
 
 # add data-sec splunk-server
 /opt/splunkforwarder/bin/splunk enable boot-start
