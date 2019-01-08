@@ -1,5 +1,8 @@
 #! /bin/bash
 
+# install rpl
+apt install rpl -y
+
 # replace splunk hostname with current hostname
 rpl -qf "admin1-VirtualBox" $HOSTNAME /opt/splunkforwarder/etc/system/local/server.conf
 
