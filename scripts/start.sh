@@ -10,7 +10,7 @@ rpl -qf "admin1-VirtualBox" $(uname -n) /opt/splunkforwarder/etc/system/local/se
 /opt/splunkforwarder/bin/splunk enable boot-start
 
 # add data-sec splunk-server
-/opt/splunkforwarder/bin/splunk add forward-server honey.data-sec.net:9997
+/opt/splunkforwarder/bin/splunk add forward-server gms.data-sec.net:9997
 
 # run reposync
 sh /home/datasec/scripts/Honeys/scripts/syncrepo.sh
