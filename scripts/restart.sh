@@ -22,6 +22,16 @@ mkdir /unsafe/logs
 #  Enable Splunk-Monitor #
 ##########################
 
+# FTP
+/opt/splunkforwarder/bin/splunk add monitor /unsafe/logs/ftp/vsftpd.log
+
+# SMB
+/opt/splunkforwarder/bin/splunk add monitor /unsafe/logs/smb/smb.log
+
+# HTTP
+/opt/splunkforwarder/bin/splunk add monitor /unsafe/logs/apache/access.log
+
+
 
 
 ##########################
