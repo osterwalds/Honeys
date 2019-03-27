@@ -31,8 +31,8 @@ mkdir /unsafe/logs
 # HTTP
 /opt/splunkforwarder/bin/splunk add monitor /unsafe/logs/apache/access.log
 
-
-
+# Heartbeat
+/opt/splunkforwarder/bin/splunk add monitor /unsafe/logs/heartbeat.log
 
 ##########################
 #  Starting Containers   #
