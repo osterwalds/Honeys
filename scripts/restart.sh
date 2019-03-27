@@ -19,7 +19,13 @@ mkdir /unsafe/static
 mkdir /unsafe/logs
 
 ##########################
-#   Starting Containers  #
+#  Enable Splunk-Monitor #
+##########################
+
+
+
+##########################
+#  Starting Containers   #
 ##########################
 
 # Start smb container
