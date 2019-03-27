@@ -1,7 +1,13 @@
 #! /bin/bash
 
 # install rpl
-apt install rpl -y
+apt install rpl ntpdate -y
+
+# sync the clock with de.pool.ntp.org
+ntpdate -s de.pool.ntp.org
+
+# set europe/berlin timezone
+timedatectl set-timezone Europe/Berlin
 
 # delete unnecessary inputs.conf file
 rm -f /opt/splunkforwarder/etc/system/local/inputs.conf
