@@ -3,6 +3,9 @@
 # install rpl
 apt install rpl -y
 
+# delete unnecessary inputs.conf file
+rm -f /opt/splunkforwarder/etc/system/local/inputs.conf
+
 # replace splunk hostname with current hostname
 rpl -qf "admin1-VirtualBox" $(uname -n) /opt/splunkforwarder/etc/system/local/server.conf
 
