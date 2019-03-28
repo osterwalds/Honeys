@@ -19,22 +19,6 @@ mkdir /unsafe/static
 mkdir /unsafe/logs
 
 ##########################
-#  Enable Splunk-Monitor #
-##########################
-
-# FTP
-/opt/splunkforwarder/bin/splunk add monitor /unsafe/logs/ftp/vsftpd.log -auth admin:changeme
-
-# SMB
-/opt/splunkforwarder/bin/splunk add monitor /unsafe/logs/smb/smb.log -auth admin:changeme
-
-# HTTP
-/opt/splunkforwarder/bin/splunk add monitor /unsafe/logs/apache/access.log -auth admin:changeme
-
-# Heartbeat
-/opt/splunkforwarder/bin/splunk add monitor /unsafe/logs/heartbeat.log -auth admin:changeme
-
-##########################
 #  Starting Containers   #
 ##########################
 
@@ -46,3 +30,24 @@ docker run -d -v /unsafe/logs/ftp:/var/log/ftplog -p 20:20 -p 21:21 -e FTP_USER=
 
 # Start apache container
 docker run -d -v /unsafe/logs/apache:/var/log/apache2 -p 80:80 steven411/apache
+
+##########################
+#  Enable Splunk-Monitor #
+##########################
+
+# FTP
+touch /unsafe/logs/ftp/vsftpd.log
+/opt/splunkforwarder/bin/splunk add monitor /unsafe/logs/ftp/vsftpd.log -auth admin:changeme
+
+# SMB
+touch /unsafe/logs/smb/smb.log
+/opt/splunkforwarder/bin/splunk add monitor /unsafe/logs/smb/smb.log -auth admin:changeme
+
+# HTTP
+touch /unsafe/logs/apache/access.log
+/opt/splunkforwarder/bin/splunk add monitor /unsafe/logs/apache/access.log -auth admin:changeme
+
+# Heartbeat
+touch /unsafe/logs/heartbeat.log
+/opt/splunkforwarder/bin/splunk add monitor /unsafe/logs/heartbeat.log -auth admin:changeme
+
